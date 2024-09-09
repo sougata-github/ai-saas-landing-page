@@ -4,7 +4,7 @@ import stars from "@/assets/images/stars.png";
 const Hero = () => {
   return (
     <section
-      className="text-center h-[492px] md:h-[800px] flex items-center overflow-hidden relative [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]"
+      className="text-center h-[492px] md:h-[800px] flex items-center overflow-hidden relative [mask-image:linear-gradient(to_bottom,black_74%,transparent)] md:[mask-image:linear-gradient(to_bottom,black_65%,transparent)]"
       style={{
         backgroundImage: `url(${stars.src})`,
       }}
@@ -26,8 +26,8 @@ const Hero = () => {
       <div className="absolute size-[444px] md:size-[780px] rounded-full border border-white/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="absolute size-[544px] md:size-[980px] rounded-full border border-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20">
-        <div className="absolute h-2 w-2 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full" />
-        <div className="absolute h-2 w-2 top-1/2 left-full -translate-x-1/2 -translate-y-1/2 bg-white rounded-full" />
+        <div className="absolute h-2 w-2 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full max-sm:hidden" />
+        <div className="absolute h-2 w-2 top-1/2 left-full -translate-x-1/2 -translate-y-1/2 bg-white rounded-full max-sm:hidden" />
       </div>
 
       {/* Content */}
