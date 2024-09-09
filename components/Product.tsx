@@ -11,7 +11,7 @@ const Product = () => {
     <section className="py-20 md:py-24">
       <div className="section-container">
         <h2 className="section-heading">Elevate your SEO efforts.</h2>
-        <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto tracking-tight text-center mt-5">
+        <p className="section-paragraph">
           From small startups to large enterprises, our AI-driven tool has
           revolutionized the way businesses approach SEO.
         </p>

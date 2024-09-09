@@ -33,4 +33,8 @@
   .section-heading {
     @apply text-5xl sm:text-6xl tracking-tighter text-center font-medium;
   }
+
+  .section-paragraph {
+    @apply text-white/70 text-lg sm:text-xl max-w-md mx-auto tracking-tight text-center mt-5;
+  }
 }

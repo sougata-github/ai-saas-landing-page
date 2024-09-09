@@ -7,7 +7,7 @@ const Testimonial = () => {
     <section className="py-20 md:py-24">
       <div className="section-container">
         <h2 className="section-heading">Beyond Expectations</h2>
-        <p className="text-white/70 text-lg sm:text-xl max-w-md mx-auto tracking-tight text-center mt-5">
+        <p className="section-paragraph">
           Our revolutionary AI SEO tools have transformed our clients&apos;
           strategies.
         </p>
