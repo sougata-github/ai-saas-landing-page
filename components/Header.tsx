@@ -8,9 +8,9 @@ import { Menu } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 backdrop-blur-md py-4 border-b border-white/15 overflow-hidden">
+    <header className="backdrop-blur-md z-40 sticky top-0 py-4 border-b border-white/15 overflow-hidden">
       <div className="section-container">
-        <div className="flex justify-between items-center sm:p-2.5 rounded-xl">
+        <div className="flex justify-between items-center p-2.5 rounded-xl">
           <div>
             <div className="border border-white/15 size-10 rounded-lg inline-flex justify-center items-center">
               <Logo className="size-8" />
@@ -30,7 +30,7 @@ const Header = () => {
             </nav>
           </div>
           <div className="flex gap-4 items-center">
-            <ShinyButton />
+            <ShinyButton>Join waitlist</ShinyButton>
             <span className="sm:hidden">
               <Menu className="size-[30px]" />
             </span>

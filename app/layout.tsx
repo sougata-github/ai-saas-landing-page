@@ -18,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={twMerge(inter.className, "bg-black text-white antialiased")}
+        className={twMerge(
+          inter.className,
+          "bg-black text-white antialiased scrollbar-hidden"
+        )}
       >
         {children}
       </body>
