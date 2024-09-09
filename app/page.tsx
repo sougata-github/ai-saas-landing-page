@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
 import Product from "@/components/Product";
+import Testimonial from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <Product />
+      <Testimonial />
     </div>
   );
 }

@@ -29,4 +29,8 @@
   .section-container {
     @apply max-w-5xl mx-auto px-8 sm:px-4;
   }
+
+  .section-heading {
+    @apply text-5xl sm:text-6xl tracking-tighter text-center font-medium;
+  }
 }
