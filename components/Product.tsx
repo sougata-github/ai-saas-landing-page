@@ -1,12 +1,63 @@
 "use client";
 
+import { useState } from "react";
+import {
+  animate,
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+} from "framer-motion";
+
+import Tab from "./Tab";
 import { tabs } from "@/lib/data";
 
 import productImage from "@/assets/images/product-image.png";
 
-import { DotLottiePlayer } from "@dotlottie/react-player";
-
 const Product = () => {
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  const backgroundPositionX = useMotionValue(tabs[0].backgroundPositionX);
+  const backgroundPositionY = useMotionValue(tabs[0].backgroundPositionY);
+  const backgroundSizeX = useMotionValue(tabs[0].backgroundSizeX);
+
+  const backgroundSize = useMotionTemplate`
+    ${backgroundSizeX}% auto
+  `;
+
+  const backgroundPosition = useMotionTemplate`
+    ${backgroundPositionX}% ${backgroundPositionY}%
+  `;
+
+  const handleSelectTab = (index: number) => {
+    setSelectedTab(index);
+    animate(
+      backgroundSizeX,
+      [backgroundSizeX.get(), tabs[index].backgroundSizeX],
+      {
+        duration: 2,
+        ease: "easeInOut",
+      }
+    );
+
+    animate(
+      backgroundPositionX,
+      [backgroundPositionX.get(), tabs[index].backgroundPositionX],
+      {
+        duration: 2,
+        ease: "easeInOut",
+      }
+    );
+
+    animate(
+      backgroundPositionY,
+      [backgroundPositionY.get(), 100, tabs[index].backgroundPositionY],
+      {
+        duration: 2,
+        ease: "easeInOut",
+      }
+    );
+  };
+
   return (
     <section className="py-20 md:py-24">
       <div className="section-container">
@@ -17,32 +68,25 @@ const Product = () => {
         </p>
 
         <div className="mt-10 flex flex-col md:flex-row gap-3">
-          {tabs.map((tab) => (
-            <div
+          {tabs.map((tab, index) => (
+            <Tab
               key={tab.title}
-              className="border border-white/15 flex p-2.5 rounded-xl gap-2.5 items-center md:flex-1"
-            >
-              <div className="size-12 border border-white/15 rounded-lg inline-flex items-center justify-center">
-                <DotLottiePlayer src={tab.icon} className="size-5" autoplay />
-              </div>
-
-              <div className="font-medium">{tab.title}</div>
-              {tab.isNew && (
-                <div className="text-xs rounded-full px-2 py-0.5 bg-[#8C44FF] text-black font-semibold">
-                  new
-                </div>
-              )}
-            </div>
+              {...tab}
+              onClick={() => handleSelectTab(index)}
+              selected={selectedTab === index}
+            />
           ))}
         </div>
 
         <div className="border border-white/20 p-2.5 rounded-xl mt-3">
-          <div
+          <motion.div
             className="aspect-video bg-cover"
             style={{
               backgroundImage: `url(${productImage.src})`,
+              backgroundSize,
+              backgroundPosition,
             }}
-          ></div>
+          />
         </div>
       </div>
     </section>

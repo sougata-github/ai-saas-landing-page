@@ -41,7 +41,7 @@ export const tabs = [
   },
   {
     icon: "/assets/lottie/stars.lottie",
-    title: "Smart keyboard generator",
+    title: "Smart keyword generator",
     isNew: true,
     backgroundPositionX: 100,
     backgroundPositionY: 27,
