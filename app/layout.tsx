@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.className,
-          "bg-black text-white antialiased scrollbar-hidden"
+          "bg-black text-white antialiased custom-scrollbar"
         )}
       >
         {children}
