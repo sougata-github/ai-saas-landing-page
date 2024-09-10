@@ -7,7 +7,7 @@ import ShinyButton from "./ShinyButton";
 import stars from "@/assets/images/stars.png";
 
 const Hero = () => {
-  const ref = useRef<HTMLSelectElement>(null);
+  const ref = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
