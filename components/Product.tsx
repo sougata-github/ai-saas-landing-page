@@ -32,7 +32,7 @@ const Product = () => {
     setSelectedTab(index);
     animate(
       backgroundSizeX,
-      [backgroundSizeX.get(), tabs[index].backgroundSizeX],
+      [backgroundSizeX.get(), 100, tabs[index].backgroundSizeX],
       {
         duration: 2,
         ease: "easeInOut",
@@ -50,7 +50,7 @@ const Product = () => {
 
     animate(
       backgroundPositionY,
-      [backgroundPositionY.get(), 100, tabs[index].backgroundPositionY],
+      [backgroundPositionY.get(), tabs[index].backgroundPositionY],
       {
         duration: 2,
         ease: "easeInOut",

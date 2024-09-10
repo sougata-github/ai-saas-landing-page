@@ -37,7 +37,6 @@ const Hero = () => {
         duration: 120,
       }}
     >
-      {/* Background Image */}
       <div className="absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(140,69,255,0.5)_15%,rgb(14,0,36,0.5)_78%,transparent)]" />
 
       {/*Planet */}
